@@ -23,13 +23,13 @@ function Header() {
 
                             <>
                                 <li>
-                                    <Link to="">Minha conta</Link>
+                                    <Link to="/account">Minha conta</Link>
                                 </li>
                                 <li>
-                                    <Link to="">Sair</Link>
+                                    <Link to="/logout">Sair</Link>
                                 </li>
                                 <li>
-                                    <Link to="" className="button">Anunciar</Link>
+                                    <Link to="/signin" className="button">Anunciar</Link>
                                 </li>
                             </>
                         }
@@ -37,13 +37,13 @@ function Header() {
 
                             <>
                                 <li>
-                                    <Link to="">Login</Link>
+                                    <Link to="/signin">Login</Link>
                                 </li>
                                 <li>
-                                    <Link to="">Cadastrar</Link>
+                                    <Link to="/cadastro">Cadastrar</Link>
                                 </li>
                                 <li>
-                                    <Link to="" className="button">Anunciar</Link>
+                                    <Link to="/signin" className="button">Anunciar</Link>
                                 </li>
                             </>
 
