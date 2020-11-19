@@ -46,11 +46,16 @@ nav{
     li{
         margin-left: 20px;
         margin-right: 20px;
+        
 
-        a{
+        a,button{
             color: #242424;
             font-size: 14px;
             font-weight: 400;
+            border: none;
+            background: none;
+            cursor: pointer;
+            outline:0;
 
             &:hover{
                 color:#999;

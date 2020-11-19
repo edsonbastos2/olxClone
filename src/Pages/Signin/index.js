@@ -26,6 +26,8 @@ function Signin() {
             doLogin(json.token, remenberPassword);
             window.location.href = "/";
         }
+
+        setDisabled(false);
     }
 
     return (
