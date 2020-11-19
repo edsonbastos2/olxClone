@@ -1,9 +1,9 @@
 
-const OlxApi = () => {
+const OlxApi = {
     login: async (email, password) => {
 
-        return {}
+        return { error: 'Funcionalidade incompleta' }
     }
 }
 
-export default OlxApi;
+export default () => OlxApi;

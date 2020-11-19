@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { PageArea } from './styled';
-import { PageContainer, PageTitle } from '../../components/mainComponents';
+import { PageContainer, PageTitle, ErrorMenssage } from '../../components/mainComponents';
 import OlxApi from '../../helpers/OlxApi';
 import { doLogin } from '../../helpers/AuthHandler';
 
@@ -33,23 +33,41 @@ function Signin() {
             <PageContainer>
                 <PageTitle>Login</PageTitle>
                 <PageArea>
+                    {error &&
+                        <ErrorMenssage>{error}</ErrorMenssage>
+                    }
                     <form action="" onSubmit={handleSubmit}>
                         <label className="area">
                             <div className="area--title">E-mail</div>
                             <div className="area--input">
-                                <input type="email" disabled={disabled} />
+                                <input
+                                    type="email"
+                                    disabled={disabled}
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
+                                />
                             </div>
                         </label>
                         <label className="area">
                             <div className="area--title">Senha</div>
                             <div className="area--input">
-                                <input type="password" disabled={disabled} />
+                                <input
+                                    type="password"
+                                    disabled={disabled}
+                                    value={passaword}
+                                    onChange={e => setpassaword(e.target.value)}
+                                />
                             </div>
                         </label>
                         <label className="area">
                             <div className="area--title">Lembrar senha</div>
                             <div className="area--input">
-                                <input type="checkbox" disabled={disabled} />
+                                <input
+                                    type="checkbox"
+                                    disabled={disabled}
+                                    checked={remenberPassword}
+                                    onChange={() => setremenberPassword(!remenberPassword)}
+                                />
                             </div>
                         </label>
                         <label className="area">
